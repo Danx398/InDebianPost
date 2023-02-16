@@ -12,7 +12,7 @@ sudo apt install php-common
 sudo apt install php-mysql
 sudo service apache2 restart
 sudo touch /var/www/html/phpinfo.php
-sed -i 'li <?php phpinfo();?> phpinfo.php
+echo '<?php phpinfo(); ?>' >> "/var/www/html/phpinfo.php"
 sudo apt update
 sudo apt upgrade
 sudo apt install curl php-cli
