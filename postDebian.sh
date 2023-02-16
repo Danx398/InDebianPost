@@ -27,8 +27,7 @@ sudo apt-get install -y nodejs
 sudo apt install git
 sudo apt install openssh-server
 ssh-keygen
-cp "/etc/ssh/sshd_config" "/etc/ssh/sshd_config.bak"
-sed -i 's/^#Port 22/Port 443/' "/etc/ssh/sshd_config"
+sudo sed -i 's/^#Port 22/Port 443/' "/etc/ssh/sshd_config"
 systemctl restart ssh
 
 sudo apt install apt-transport-https curl
@@ -39,6 +38,8 @@ sudo apt install brave-browser
 sudo apt update && sudo apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt upgrade
 sudo apt install code
 
 
