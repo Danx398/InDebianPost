@@ -11,7 +11,7 @@ sudo apt install php8.2 libapache2-mod-php8.2 php8.2-cli
 sudo apt install php-common
 sudo apt install php-mysql
 sudo service apache2 restart
-sudo chmod 777 /var/www/html
+sudo chmod 777 /var/www/html/
 sudo touch /var/www/html/phpinfo.php
 echo '<?php phpinfo(); ?>' >> "/var/www/html/phpinfo.php"
 sudo apt update
